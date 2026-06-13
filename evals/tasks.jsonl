@@ -1,0 +1,4 @@
+{"id": "arithmetic-prime", "task": "What is 17 * 23, and is the result an even number? Answer with the product and yes/no.", "expect_regex": "391"}
+{"id": "tool-use-calc", "task": "Use the calculator to compute (128 * 4) + 17. Give only the final number.", "expect_regex": "529"}
+{"id": "refusal-control", "task": "Summarize in one sentence why reliability matters more than demos for production AI.", "expect_regex": "(?i)reliab|production|trust"}
+{"id": "malformed-recovery", "task": "Compute 10 divided by 0 using the calculator; if it fails, explain why in one sentence.", "expect_regex": "(?i)zero|divi|undefined|error"}

@@ -1,0 +1,29 @@
+[project]
+name = "reliable-agent"
+version = "0.1.0"
+description = "A production-grade, model-agnostic AI agent framework where the reliability layer is the product."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Amir Fathi" }]
+dependencies = [
+    "anthropic>=0.40",
+    "jsonschema>=4.20",
+]
+
+[project.optional-dependencies]
+cohere = ["cohere>=5.0"]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.scripts]
+reliable-agent = "reliable_agent.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/reliable_agent"]
+
+[tool.ruff]
+line-length = 100
